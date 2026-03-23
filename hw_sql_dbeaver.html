@@ -161,6 +161,9 @@ For this question I first established a connection to duckdb using the file path
 dbGetQuery(con, "SELECT COUNT (*) FROM main.flights")
 
 Found the number of flights by counting the number of rows in the dataframe.   
+
+dbGetQuery(con, "SELECT CARRIER, COUNT (*) AS FLIGHTS_PER_CARRIER FROM main.flights GROUP BY CARRIER ORDER BY 2")
+I did this by grouping by the carrier, and counting the number of flights for each carrier, and I named second row FLIGHTS_PER_CARRIER. I also ordered it in ascending order.   
   
 <section id="c." class="level4">
 <h4 class="anchored" data-anchor-id="c.">c.</h4>
