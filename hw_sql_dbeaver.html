@@ -157,6 +157,11 @@ For this question I first established a connection to duckdb using the file path
 <li><p>for each carrier</p></li>
 </ol>
 </section>
+
+dbGetQuery(con, "SELECT COUNT (*) FROM main.flights")
+
+Found the number of flights by counting the number of rows in the dataframe.   
+  
 <section id="c." class="level4">
 <h4 class="anchored" data-anchor-id="c.">c.</h4>
 <p>Find the <strong>average departure delay</strong> (<code>dep_delay</code>)</p>
