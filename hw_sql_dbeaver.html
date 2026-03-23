@@ -142,6 +142,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>List the first <strong>10 rows</strong> of the <code>flights</code> table.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(conn, <span class="st">"YOUR SQL HERE"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+
+library(DBI)
+con <- dbConnect(duckdb::duckdb(), dbdir = "C:\\Users\\rgunt\\DuckDB\\flights.duckdb") 
+dbGetQuery(con, "SELECT * FROM main.flights LIMIT 10") 
+  
 <section id="b." class="level4">
 <h4 class="anchored" data-anchor-id="b.">b.</h4>
 <p>Find the <strong>number of flights</strong></p>
