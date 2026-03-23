@@ -169,6 +169,10 @@ I did this by grouping by the carrier, and counting the number of flights for ea
 <h4 class="anchored" data-anchor-id="c.">c.</h4>
 <p>Find the <strong>average departure delay</strong> (<code>dep_delay</code>)</p>
 </section>
+
+dbGetQuery(con, "SELECT AVG(dep_delay) AS avg_dep_delay FROM main.flights;")
+I selected the dep_delay column and implemented the AVG method on it.   
+  
 <section id="d." class="level4">
 <h4 class="anchored" data-anchor-id="d.">d.</h4>
 <p>Find the <strong>top 5 destinations</strong> (<code>dest</code>) With the most flights.</p>
