@@ -202,6 +202,13 @@ I grouped by DEST and found the most frequent destinations by counting how many 
 <p>You must close the connection when you are done. Use <code>dbDisconnect()</code></p>
 </blockquote>
 </section>
+
+dbGetQuery(con, "SELECT CARRIER, AVG(arr_delay) AS AVG_ARR_DELAY FROM main.flights GROUP BY CARRIER ORDER BY 2 DESC")
+
+dbDisconnect(con)
+
+I selected the CARRIER column and did the average of arr_delay, grouped by carrier and sorted the averages into descending order.   
+  
 </section>
 <section id="part-ii-answer-the-following-question-by-running-sql-using-dbeaver-with-duckdb." class="level3">
 <h3 class="anchored" data-anchor-id="part-ii-answer-the-following-question-by-running-sql-using-dbeaver-with-duckdb.">Part II: Answer the following question by running SQL using <strong>DBeaver</strong> with <strong>DuckDB</strong>.</h3>
