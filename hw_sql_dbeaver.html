@@ -184,6 +184,12 @@ I selected the dep_delay column and implemented the AVG method on it.
 </ul></li>
 </ul>
 </section>
+
+dbGetQuery(con, "SELECT DEST, COUNT (*) AS TOP_5_DEST FROM main.flights GROUP BY DEST ORDER BY 2 DESC LIMIT 5")
+
+I grouped by DEST and found the most frequent destinations by counting how many of those destinations exist in the dataset. I then limited the dataframe to the five most frequent destinations and ordered them in descending order. 
+  
+  
 <section id="e." class="level4">
 <h4 class="anchored" data-anchor-id="e.">e.</h4>
 <p>Create a table showing:</p>
