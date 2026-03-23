@@ -146,6 +146,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 library(DBI)
 con <- dbConnect(duckdb::duckdb(), dbdir = "C:\\Users\\rgunt\\DuckDB\\flights.duckdb") 
 dbGetQuery(con, "SELECT * FROM main.flights LIMIT 10") 
+
+For this question I first established a connection to duckdb using the file path where flights.duckdb was saved. I then selected the first 10 rows in the dataframe by saying LIMIT 10. 
   
 <section id="b." class="level4">
 <h4 class="anchored" data-anchor-id="b.">b.</h4>
